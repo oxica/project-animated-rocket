@@ -49,3 +49,114 @@ body {
   border: 40px solid transparent;
   border-bottom: 40px solid red;
 }
+
+.fire {
+  position: relative;
+  display: flex;
+  z-index: 1;
+  padding: 0 10px;
+}
+
+.fire span {
+  position: relative;
+  bottom: -120px;
+  display: block;
+  margin: 0 2px 50px;
+  min-width: 3px;
+  height: 120px;
+  background: rgba(249, 97, 37, 0.747);
+  border-radius: 50%;
+  animation: animate 5s linear infinite;
+  opacity: 0;
+  filter: blur(8px);
+  animation-delay: calc(var(--i) * -0.5s);
+}
+
+.clouds-right {
+  position: relative;
+  display: flex;
+  z-index: 1;
+  padding: 0 200px;
+}
+
+.clouds-right span {
+  position: relative;
+  bottom: 320px;
+  left: 300px;
+  display: block;
+  margin: 0 2px 50px;
+  min-width: 8px;
+  height: 220px;
+  background: rgb(245, 244, 243);
+  border-radius: 50%;
+  animation: animate 5s linear infinite;
+  opacity: 0;
+  filter: blur(15px);
+  animation-delay: calc(var(--i) * -0.5s);
+}
+
+.clouds-left {
+  position: relative;
+  display: flex;
+  z-index: 1;
+  padding: 0 200px;
+}
+
+.clouds-left span {
+  position: relative;
+  bottom: 320px;
+  right: 700px;
+  display: block;
+  margin: 0 2px 50px;
+  min-width: 9px;
+  height: 220px;
+  background: rgb(198, 202, 206);
+  border-radius: 50%;
+  animation: animate 5s linear infinite;
+  opacity: 0;
+  filter: blur(15px);
+  animation-delay: calc(var(--i) * -0.5s);
+}
+
+.clouds-left-hight {
+  position: relative;
+  display: flex;
+  z-index: 1;
+  padding: 0 300px;
+}
+
+.clouds-left-hight span {
+  position: relative;
+  bottom: 1150px;
+  right: 500px;
+  display: block;
+  margin: 0 3px 60px;
+  min-width: 8px;
+  height: 300px;
+  background: rgb(174, 195, 241);
+  border-radius: 50%;
+  animation: animate 5s linear infinite;
+  opacity: 0;
+  filter: blur(15px);
+  animation-delay: calc(var(--i) * -0.5s);
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(0) scaleX(1);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(150px) scaleX(5);
+  }
+  95% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(300px) scaleX(10);
+    opacity: 0;
+  }
+}
