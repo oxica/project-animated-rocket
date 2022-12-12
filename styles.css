@@ -61,7 +61,7 @@ body {
   position: relative;
   bottom: -120px;
   display: block;
-  margin: 0 2px 50px;
+  margin: 0 0px 50px;
   min-width: 3px;
   height: 120px;
   background: rgba(249, 97, 37, 0.747);
@@ -86,7 +86,7 @@ body {
   display: block;
   margin: 0 2px 50px;
   min-width: 8px;
-  height: 220px;
+  height: 140px;
   background: rgb(245, 244, 243);
   border-radius: 50%;
   animation: animate 5s linear infinite;
@@ -109,12 +109,12 @@ body {
   display: block;
   margin: 0 2px 50px;
   min-width: 9px;
-  height: 220px;
+  height: 120px;
   background: rgb(198, 202, 206);
   border-radius: 50%;
   animation: animate 5s linear infinite;
   opacity: 0;
-  filter: blur(15px);
+  filter: blur(20px);
   animation-delay: calc(var(--i) * -0.5s);
 }
 
@@ -132,31 +132,31 @@ body {
   display: block;
   margin: 0 3px 60px;
   min-width: 8px;
-  height: 300px;
+  height: 200px;
   background: rgb(174, 195, 241);
   border-radius: 50%;
   animation: animate 5s linear infinite;
   opacity: 0;
-  filter: blur(15px);
+  filter: blur(10px);
   animation-delay: calc(var(--i) * -0.5s);
 }
 
 @keyframes animate {
   0% {
-    transform: translateY(0) scaleX(1);
+    transform: translateY(0) scaleY(1);
     opacity: 0;
   }
-  15% {
+  5% {
     opacity: 1;
   }
   50% {
-    transform: translateY(150px) scaleX(5);
+    transform: translateY(100px) scaleY(5);
   }
   95% {
     opacity: 0;
   }
   100% {
-    transform: translateY(300px) scaleX(10);
+    transform: translateY(150px) scaleY(10);
     opacity: 0;
   }
 }
